@@ -10,7 +10,15 @@ Prototype of an e-commerce site for selling house plants.
 
 ## Run
 
-## Deploy to Heroku (via Leinigen Plugin)
+## Deploy to Heroku (via Docker)
+```bash
+# 1. Initialize Heroku from inside the project directory
+# Optionally provide a name for the deployed copy
+heroku create <deployed_project_name>
+
+# 2. Push the repo to Heroku using Git
+git push heroku master
+```
 
 ### Development mode
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:

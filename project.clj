@@ -1,16 +1,15 @@
 (defproject garden-sprites "0.1.0-SNAPSHOT"
   :description "Prototype of an e-commerce site for selling house plants"
   :url "https://github.com/mes32/garden-sprites"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "The MIT License"
+            :url "https://github.com/mes32/garden-sprites/blob/master/LICENSE"}
 
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.597"]
                  [reagent "0.9.0-rc3"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-figwheel "0.5.19"]
-            [lein-heroku "0.5.3"]]
+            [lein-figwheel "0.5.19"]]
 
   :clean-targets ^{:protect false}
 
