@@ -53,4 +53,6 @@
                    :dependencies [[binaryage/devtools "0.9.11"]
                                   [figwheel-sidecar "0.5.19"]
                                   [nrepl "0.6.0"]
-                                  [cider/piggieback "0.4.2"]]}})
+                                  [cider/piggieback "0.4.2"]]}}
+                                  
+  :heroku {:app-name "garden-sprites"})
