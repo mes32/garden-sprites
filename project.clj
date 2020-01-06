@@ -1,6 +1,6 @@
 (defproject garden-sprites "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Prototype of an e-commerce site for selling house plants"
+  :url "https://github.com/mes32/garden-sprites"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -54,5 +54,9 @@
                                   [figwheel-sidecar "0.5.19"]
                                   [nrepl "0.6.0"]
                                   [cider/piggieback "0.4.2"]]}}
+
+  :main garden-sprites.core
+
+  :aot [garden-sprites.core]
                                   
   :heroku {:app-name "garden-sprites"})
