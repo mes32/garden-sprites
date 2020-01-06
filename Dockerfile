@@ -8,4 +8,4 @@ WORKDIR /usr/src/app
 
 EXPOSE 3449
 
-CMD ["lein", "figwheel"]
+CMD ["lein", "do", "clean,", "cljsbuild", "once", "release"]

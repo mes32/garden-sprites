@@ -13,10 +13,13 @@ Prototype of an e-commerce site for selling house plants.
 ## Deploy to Heroku (via Docker)
 ```bash
 # 1. Initialize Heroku from inside the project directory
-# Optionally provide a name for the deployed copy
+#    Optionally provide a name for the deployed project
 heroku create <deployed_project_name>
 
-# 2. Push the repo to Heroku using Git
+# 2. Set the heroku stack to container so that it will build the deployed app from the Dockerfile
+heroku stack:set container
+
+# 3. Push the repo to Heroku using Git
 git push heroku master
 ```
 
@@ -52,7 +55,7 @@ lein package
 
 ## References
 - [https://reagent-project.github.io/index.html](https://reagent-project.github.io/index.html)
-- [https://devcenter.heroku.com/articles/deploying-clojure-applications-with-the-heroku-leiningen-plugin](https://devcenter.heroku.com/articles/deploying-clojure-applications-with-the-heroku-leiningen-plugin)
+- [https://devcenter.heroku.com/articles/build-docker-images-heroku-yml](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml)
 - [https://github.com/clj-commons/secretary](https://github.com/clj-commons/secretary)
 
 ## Author
