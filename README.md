@@ -6,11 +6,34 @@ Prototype of an e-commerce site for selling house plants.
 - Clojure
 - Leiningen
 
-## Setup
+## Setup and Run
 
-## Run
+### Development mode
+To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
+
+```
+lein figwheel
+```
+
+Figwheel will automatically detect changes to .cljs files and recompile as needed.
+
+Once Figwheel is running, you should be able to open `public/index.html` in the web browser. See [localhost:3449/index.html](http://localhost:3449/index.html).
+
+### Compiling for production
+
+```
+# Option 1
+lein clean
+lein package
+
+# Option 2
+lein do clean, cljsbuild once release
+```
 
 ## Deploy to Heroku (via Docker)
+
+**Note:** This is currently failing on the build stage due to Heroku's memory limits. A possible workaround might be building locally and directly deploying the compiled code.
+
 ```bash
 # 1. Initialize Heroku from inside the project directory
 #    Optionally provide a name for the deployed project
@@ -21,28 +44,6 @@ heroku stack:set container
 
 # 3. Push the repo to Heroku using Git
 git push heroku master
-```
-
-### Development mode
-To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
-
-```
-lein figwheel
-```
-
-Figwheel will automatically push cljs changes to the browser.
-Once Figwheel starts up, you should be able to open the `public/index.html` page in the browser.
-
-### REPL
-
-The project is setup to start nREPL on port `7002` once Figwheel starts.
-Once you connect to the nREPL, run `(cljs)` to switch to the ClojureScript REPL.
-
-### Building for production
-
-```
-lein clean
-lein package
 ```
 
 ## Features
