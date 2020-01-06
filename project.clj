@@ -47,6 +47,8 @@
                          :infer-externs true
                          :pretty-print false}}}}
 
+  :min-lein-version "2.9.1"
+
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
