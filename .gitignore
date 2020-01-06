@@ -12,5 +12,6 @@ pom.xml.asc
 /public/js
 /out
 /.repl
+.rebel_readline_history
 *.log
 /.env
