@@ -1,4 +1,5 @@
 (ns garden-sprites.core
+    (:gen-class)
     (:require
       [reagent.core :as r]))
 
@@ -16,3 +17,6 @@
 
 (defn init! []
   (mount-root))
+
+(defn -main []
+  (init!))
