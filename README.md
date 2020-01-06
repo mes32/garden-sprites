@@ -1,6 +1,6 @@
 # Garden Sprites
 
-Prototype of an e-commerce site selling plants.
+Prototype of an e-commerce site for selling house plants.
 
 ## Requirements
 - Clojure

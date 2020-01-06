@@ -9,7 +9,8 @@
                  [reagent "0.9.0-rc3"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-figwheel "0.5.19"]]
+            [lein-figwheel "0.5.19"]
+            [lein-heroku "0.5.3"]]
 
   :clean-targets ^{:protect false}
 
