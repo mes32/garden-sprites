@@ -6,7 +6,8 @@
 ;; Views
 
 (defn home-page []
-  [:div [:h2 "Welcome to Garden Sprites"]])
+  [:div [:h2 "Welcome to Garden Sprites"]
+    [:h3 "Prototype of an e-commerce site selling house plants"]])
 
 ;; -------------------------
 ;; Initialize app
