@@ -56,5 +56,7 @@
                                   [figwheel-sidecar "0.5.19"]
                                   [nrepl "0.6.0"]
                                   [cider/piggieback "0.4.2"]]}}
+
+  :main garden-sprites.core
                                   
   :heroku {:app-name "garden-sprites"})
