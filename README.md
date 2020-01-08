@@ -11,7 +11,7 @@ Prototype of an e-commerce site for selling house plants.
 ### Development mode
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
 
-```
+```bash
 lein figwheel
 ```
 
@@ -21,7 +21,7 @@ Once Figwheel is running, you should be able to open `public/index.html` in the 
 
 ### Compiling for production
 
-```
+```bash
 # Option 1
 lein clean
 lein package
@@ -57,7 +57,7 @@ git push heroku master
 ## References
 - [https://reagent-project.github.io/index.html](https://reagent-project.github.io/index.html)
 - [https://devcenter.heroku.com/articles/build-docker-images-heroku-yml](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml)
-- [https://github.com/clj-commons/secretary](https://github.com/clj-commons/secretary)
+- [https://github.com/metosin/reitit/tree/master/examples/frontend](https://github.com/metosin/reitit/tree/master/examples/frontend)
 
 ## Author
 Mike Stockman
