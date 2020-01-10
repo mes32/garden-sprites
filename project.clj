@@ -4,11 +4,17 @@
   :license {:name "The MIT License"
             :url "https://github.com/mes32/garden-sprites/blob/master/LICENSE"}
 
-  :dependencies [[org.clojure/clojure "1.10.1"]
-                 [org.clojure/clojurescript "1.10.597"]
-                 [reagent "0.9.0-rc3"]
-                 [reagent-utils "0.3.3"]
-                 [clj-commons/secretary "1.2.4"]]
+  :dependencies [[org.clojure/clojure "1.10.0"]
+                 [ring-server "0.5.0"]
+                 [reagent "0.8.1"]
+                 [ring "1.7.1"]
+                 [hiccup "1.0.5"]
+                 [org.clojure/clojurescript "1.10.439"]
+                 [metosin/reitit "0.3.10"]
+                 [metosin/reitit-spec "0.3.10"]
+                 [metosin/reitit-frontend "0.3.10"]
+                 ;; Just for pretty printting the match
+                 [fipp "0.6.14"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.19"]]

@@ -1,41 +1,45 @@
 (ns garden-sprites.core
-    (:require
-      [reagent.core :as r]
-      [reagent.session :as session]
-      [secretary.core :as secretary :refer-macros [defroute]]))
-
-(defn page []
-  [(session/get :current-page)])
+  (:require [reagent.core :as r]
+            [reitit.frontend :as rf]
+            [reitit.frontend.easy :as rfe]
+            [reitit.coercion :as rc]
+            [reitit.coercion.spec :as rss]
+            [spec-tools.data-spec :as ds]
+            [fipp.edn :as fedn]))
 
 ;; -------------------------
-;; Views/Pages
-
-; (defn index-page []
-;   [:div [:h2 "// Welcome to Garden Sprites //"]])
+;; Pages
 
 (defn home-page []
-  [:div [:h2 "Welcome to Garden Sprites"]
-    [:h3 "Prototype of an e-commerce site selling house plants"]
-    [:div [:a {:href "#/shopping-cart"} "go to shopping cart"]]])
-
-(defn shopping-cart-page []
-  [:div [:h2 "Shopping Cart"]
-   [:div [:a {:href "#/"} "go to the home page"]]])
+  [:div
+   [:h2 "Welcome to Garden Sprites"]])
 
 ;; -------------------------
 ;; Routes
-(secretary/set-config! :prefix "#")
+(defonce match (r/atom nil))
 
-(secretary/defroute "/" []
-  (session/put! :current-page home-page))
+(defn current-page []
+  [:div
+   [:ul
+    [:li [:a {:href (rfe/href ::frontpage)} "Frontpage"]]]
+   (if @match
+     (let [view (:view (:data @match))]
+       [view @match]))
+   [:pre (with-out-str (fedn/pprint @match))]])
 
-(secretary/defroute "/shopping-cart" []
-  (session/put! :current-page shopping-cart-page))
+(def routes
+  [["/"
+    {:name ::frontpage
+     :view home-page}]])
 
 ;; -------------------------
 ;; Initialize app
-(defn mount-components []
-  (r/render [#'page] (.getElementById js/document "app")))
-
 (defn init! []
-  (mount-components))
+  (rfe/start!
+    (rf/router routes {:data {:coercion rss/coercion}})
+    (fn [m] (reset! match m))
+    ;; set to false to enable HistoryAPI
+    {:use-fragment true})
+  (r/render [current-page] (.getElementById js/document "app")))
+
+(init!)
