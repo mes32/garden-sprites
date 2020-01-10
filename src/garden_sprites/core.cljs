@@ -14,6 +14,22 @@
   [:div
    [:h2 "Welcome to Garden Sprites"]])
 
+(defn epiphytes-page []
+  [:div
+   [:h2 "Epiphytes"]])
+
+(defn herbs-page []
+  [:div
+   [:h2 "Herbs"]])
+
+(defn succulents-page []
+  [:div
+   [:h2 "Succulents"]])
+
+(defn shopping-cart-page []
+  [:div
+   [:h2 "Shopping Cart"]])
+
 ;; -------------------------
 ;; Routes
 (defonce match (r/atom nil))
@@ -21,7 +37,11 @@
 (defn current-page []
   [:div
    [:ul
-    [:li [:a {:href (rfe/href ::frontpage)} "Frontpage"]]]
+    [:li [:a {:href (rfe/href ::home-page)} "Home"]]
+    [:li [:a {:href (rfe/href ::epiphytes-page)} "🌱Epiphytes"]]
+    [:li [:a {:href (rfe/href ::herbs-page)} "🌿Herbs"]]
+    [:li [:a {:href (rfe/href ::succulents-page)} "🌵Succulents"]]
+    [:li [:a {:href (rfe/href ::shopping-cart-page)} "Shopping Cart"]]]
    (if @match
      (let [view (:view (:data @match))]
        [view @match]))
@@ -29,8 +49,20 @@
 
 (def routes
   [["/"
-    {:name ::frontpage
-     :view home-page}]])
+    {:name ::home-page
+     :view home-page}]
+  ["/epiphytes"
+    {:name ::epiphytes-page 
+     :view epiphytes-page}]
+  ["/herbs"
+    {:name ::herbs-page 
+     :view herbs-page}]
+  ["/succulents"
+    {:name ::succulents-page 
+     :view succulents-page}]
+  ["/shopping-cart" 
+    {:name ::shopping-cart-page 
+    :view shopping-cart-page}]])
 
 ;; -------------------------
 ;; Initialize app
