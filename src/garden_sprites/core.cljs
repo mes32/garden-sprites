@@ -5,7 +5,8 @@
             [reitit.coercion :as rc]
             [reitit.coercion.spec :as rss]
             [spec-tools.data-spec :as ds]
-            [fipp.edn :as fedn]))
+            [fipp.edn :as fedn]
+            [garden-sprites.pages.herbs :refer [herbs-page]]))
 
 ;; -------------------------
 ;; Pages
@@ -17,10 +18,6 @@
 (defn epiphytes-page []
   [:div
    [:h2 "Epiphytes"]])
-
-(defn herbs-page []
-  [:div
-   [:h2 "Herbs"]])
 
 (defn succulents-page []
   [:div
