@@ -13,7 +13,10 @@
 
 (defn home-page []
   [:div
-   [:h2 "Welcome to Garden Sprites"]])
+   [:h2 "Welcome to Garden Sprites"]
+   [:img {:src "./images/potted-plants.jpg"}]])
+
+; Photo by Min An from Pexels
 
 (defn epiphytes-page []
   [:div
