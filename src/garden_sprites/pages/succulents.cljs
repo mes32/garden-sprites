@@ -1,5 +1,4 @@
-(ns garden-sprites.pages.succulents
-  (:require [reagent.core :as r]))
+(ns garden-sprites.pages.succulents)
 
 (defn succulents-page []
   [:div

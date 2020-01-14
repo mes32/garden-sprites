@@ -6,45 +6,18 @@
             [reitit.coercion.spec :as rss]
             [spec-tools.data-spec :as ds]
             [fipp.edn :as fedn]
-            [garden-sprites.pages.home :refer [home-page]]
-            [garden-sprites.pages.epiphytes :refer [epiphytes-page]]
-            [garden-sprites.pages.herbs :refer [herbs-page]]
-            [garden-sprites.pages.succulents :refer [succulents-page]]
-            [garden-sprites.pages.shopping-cart :refer [shopping-cart-page]]))
+            [garden-sprites.routes :refer [match routes refs]]
+            [garden-sprites.components.nav-bar :refer [nav-bar]]))
 
 ;; -------------------------
-;; Routes
-(defonce match (r/atom nil))
-
+;; Current page
 (defn current-page []
   [:div
-   [:ul
-    [:li [:a {:href (rfe/href ::home-page)} "Home"]]
-    [:li [:a {:href (rfe/href ::epiphytes-page)} "🌱Epiphytes"]]
-    [:li [:a {:href (rfe/href ::herbs-page)} "🌿Herbs"]]
-    [:li [:a {:href (rfe/href ::succulents-page)} "🌵Succulents"]]
-    [:li [:a {:href (rfe/href ::shopping-cart-page)} "Shopping Cart"]]]
+   [nav-bar]
    (if @match
      (let [view (:view (:data @match))]
        [view @match]))
    [:pre (with-out-str (fedn/pprint @match))]])
-
-(def routes
-  [["/"
-    {:name ::home-page
-     :view home-page}]
-  ["/epiphytes"
-    {:name ::epiphytes-page 
-     :view epiphytes-page}]
-  ["/herbs"
-    {:name ::herbs-page 
-     :view herbs-page}]
-  ["/succulents"
-    {:name ::succulents-page 
-     :view succulents-page}]
-  ["/shopping-cart" 
-    {:name ::shopping-cart-page 
-    :view shopping-cart-page}]])
 
 ;; -------------------------
 ;; Initialize app

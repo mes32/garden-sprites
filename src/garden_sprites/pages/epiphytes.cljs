@@ -1,5 +1,4 @@
-(ns garden-sprites.pages.epiphytes
-  (:require [reagent.core :as r]))
+(ns garden-sprites.pages.epiphytes)
 
 (defn epiphytes-page []
   [:div

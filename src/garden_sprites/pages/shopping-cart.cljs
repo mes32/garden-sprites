@@ -1,5 +1,4 @@
-(ns garden-sprites.pages.shopping-cart
-  (:require [reagent.core :as r]))
+(ns garden-sprites.pages.shopping-cart)
 
 (defn shopping-cart-page []
   [:div

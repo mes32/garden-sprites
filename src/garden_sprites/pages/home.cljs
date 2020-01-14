@@ -1,6 +1,5 @@
 (ns garden-sprites.pages.home
-  (:require [reagent.core :as r]
-            [garden-sprites.atoms.counter :refer [counter counter-dec]]))
+  (:require [garden-sprites.atoms.counter :refer [counter counter-dec]]))
 
 (defn home-page []
   [:div
