@@ -3,4 +3,4 @@
 
 (defn herbs-page []
   [:div
-   [:h2 "The Herbs Page"]])
+   [:h2 "Shop Herbs"]])

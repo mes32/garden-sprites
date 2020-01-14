@@ -6,7 +6,10 @@
             [reitit.coercion.spec :as rss]
             [spec-tools.data-spec :as ds]
             [fipp.edn :as fedn]
+            [garden-sprites.pages.epiphytes :refer [epiphytes-page]]
             [garden-sprites.pages.herbs :refer [herbs-page]]
+            [garden-sprites.pages.succulents :refer [succulents-page]]
+            [garden-sprites.pages.shopping-cart :refer [shopping-cart-page]]
             [garden-sprites.atoms.counter :refer [counter counter-dec]]))
 
 ;; -------------------------
@@ -23,18 +26,6 @@
             :on-click #(swap! counter counter-dec)}]])
 
 ; Photo by Min An from Pexels
-
-(defn epiphytes-page []
-  [:div
-   [:h2 "Epiphytes"]])
-
-(defn succulents-page []
-  [:div
-   [:h2 "Succulents"]])
-
-(defn shopping-cart-page []
-  [:div
-   [:h2 "Shopping Cart"]])
 
 ;; -------------------------
 ;; Routes
