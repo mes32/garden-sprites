@@ -7,16 +7,10 @@
             [spec-tools.data-spec :as ds]
             [fipp.edn :as fedn]
             [garden-sprites.pages.herbs :refer [herbs-page]]
-            [garden-sprites.atoms.counter :refer [counter]]))
+            [garden-sprites.atoms.counter :refer [counter counter-dec]]))
 
 ;; -------------------------
 ;; Pages
-
-(defn dec-counter
-  [x]
-  (if (> (- x 1) 0)
-    (- x 1)
-    0))
 
 (defn home-page []
   [:div
@@ -26,7 +20,7 @@
    [:input {:type "button" :value "Increase Count"
             :on-click #(swap! counter inc)}]
   [:input {:type "button" :value "Decrease Count"
-            :on-click #(swap! counter dec-counter)}]])
+            :on-click #(swap! counter counter-dec)}]])
 
 ; Photo by Min An from Pexels
 
