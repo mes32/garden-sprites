@@ -6,26 +6,11 @@
             [reitit.coercion.spec :as rss]
             [spec-tools.data-spec :as ds]
             [fipp.edn :as fedn]
+            [garden-sprites.pages.home :refer [home-page]]
             [garden-sprites.pages.epiphytes :refer [epiphytes-page]]
             [garden-sprites.pages.herbs :refer [herbs-page]]
             [garden-sprites.pages.succulents :refer [succulents-page]]
-            [garden-sprites.pages.shopping-cart :refer [shopping-cart-page]]
-            [garden-sprites.atoms.counter :refer [counter counter-dec]]))
-
-;; -------------------------
-;; Pages
-
-(defn home-page []
-  [:div
-   [:h2 "Welcome to Garden Sprites"]
-   [:img {:src "./images/potted-plants.jpg"}]
-   [:h3 "Count: " @counter]
-   [:input {:type "button" :value "Increase Count"
-            :on-click #(swap! counter inc)}]
-  [:input {:type "button" :value "Decrease Count"
-            :on-click #(swap! counter counter-dec)}]])
-
-; Photo by Min An from Pexels
+            [garden-sprites.pages.shopping-cart :refer [shopping-cart-page]]))
 
 ;; -------------------------
 ;; Routes
