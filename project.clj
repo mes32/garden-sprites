@@ -13,11 +13,12 @@
                  [metosin/reitit "0.3.10"]
                  [metosin/reitit-spec "0.3.10"]
                  [metosin/reitit-frontend "0.3.10"]
-                 ;; Just for pretty printting the match
+                 ;; Just for pretty printing the match
                  [fipp "0.6.14"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-figwheel "0.5.19"]]
+            [lein-figwheel "0.5.19"]
+            [lein-scss "0.3.0"]]
 
   :clean-targets ^{:protect false}
 
@@ -53,6 +54,31 @@
                          :optimizations :advanced
                          :infer-externs true
                          :pretty-print false}}}}
+
+  ; :hooks [leiningen.scss]
+
+  :scss {:builds
+         {:develop    {:source-dir "scss/"
+                       :dest-dir   "public/css/"
+                       :executable "sassc"
+                       :args       ["-m" "-I" "scss/" "-t" "nested"]}
+          :production {:source-dir "scss/"
+                       :dest-dir   "public/css/"
+                       :executable "sassc"
+                       :args       ["-I" "scss/" "-t" "compressed"]
+                       :jar        true}
+          :testremote {:source-dir "scss/"
+                       :dest-dir   "public/css/"
+                       :executable "sassc"
+                       :args       ["-I" "scss/" "-t" "nested"]
+                       :image-token "#IMAGE-URL#"
+                       :image-url "https://s3.amazonaws.com/test/"
+                       :font-token "#FONT-URL#"
+                       :font-url "https://s3.amazonaws.com/test/fonts/"}
+          :test       {:source-dir "tests/scss/"
+                       :dest-dir   "/tmp/test/css/"
+                       :executable "sassc"
+                       :args       ["-m" "-I" "scss/" "-t" "nested"]}}}
 
   :min-lein-version "2.9.1"
 

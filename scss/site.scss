@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Manuale|Roboto&display=swap');
+
 body {
-  font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Verdana, Helvetica, Arial, sans-serif;
   max-width: 600px;
   margin: 0 auto;
   padding-top: 72px;
@@ -7,6 +9,10 @@ body {
   font-size: 1.125em;
   color: #333;
   line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manuale', 'Georgia', serif
 }
 
 h1, h2, h3 {
