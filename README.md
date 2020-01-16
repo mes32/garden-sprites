@@ -11,8 +11,7 @@ To install Leiningen and SassC using [Homebrew](https://brew.sh/):
 
 ```bash
 brew update
-brew install leiningen
-brew install sassc
+brew install leiningen sassc
 ```
 
 ## Setup and Run
@@ -30,7 +29,7 @@ lein scss :develop
 lein figwheel
 ```
 
-Figwheel will automatically detect changes to `.cljs` files and recompile as needed. The SassC plugin will continue to run and watch for changes to files instide the `/scss` directory and recompile CSS as needed.
+Figwheel will automatically detect changes to `.cljs` files and recompile as needed. The SassC plugin will continue to run and watch for changes to files inside the `/scss` directory and recompile CSS as needed.
 
 Once Figwheel is running, you should be able to open `public/index.html` in the web browser. See [localhost:3449/index.html](http://localhost:3449/index.html).
 
@@ -75,6 +74,7 @@ git push heroku master
 - [https://github.com/metosin/reitit/tree/master/examples/frontend](https://github.com/metosin/reitit/tree/master/examples/frontend)
 - [https://github.com/bluegray/lein-scss](https://github.com/bluegray/lein-scss)
 - [https://yogthos.net/posts/2014-07-15-Building-Single-Page-Apps-with-Reagent.html](https://yogthos.net/posts/2014-07-15-Building-Single-Page-Apps-with-Reagent.html)
+- [https://medium.com/tech-notes-and-geek-stuff/gimp-instagram-filters-c660580661c6](https://medium.com/tech-notes-and-geek-stuff/gimp-instagram-filters-c660580661c6)
 
 ## Author
 Mike Stockman
