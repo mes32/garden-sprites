@@ -2,7 +2,7 @@
 @import "../base/reset";
 @import "../base/typography";
 
-#nav-bar {
+nav {
   @include reset();
   position: fixed;
   top: 0;

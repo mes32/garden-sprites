@@ -3,7 +3,7 @@
             [garden-sprites.routes :refer [refs]]))
 
 (defn nav-bar []
-  [:nav {:id "nav-bar"}
+  [:nav
     [:div {:class "content-div"}
       [:a {:href (rfe/href (:home refs))} [:h1 "Garden Sprites"]]
       [:div

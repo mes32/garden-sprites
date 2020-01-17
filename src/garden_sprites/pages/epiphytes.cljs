@@ -1,5 +1,6 @@
 (ns garden-sprites.pages.epiphytes)
 
 (defn epiphytes-page []
-  [:div
-   [:h2 "Shop Epiphytes"]])
+  [:main
+    [:div {:class "content-div"}
+      [:h2 "Shop Epiphytes"]]])
