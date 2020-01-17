@@ -2,28 +2,41 @@
 @import "../base/reset";
 @import "../base/typography";
 
-.nav-bar {
+#nav-bar {
   @include reset();
-
-  width: 100%;
   position: fixed;
   top: 0;
+  width: 100%;
   background-color: $body-background-color;
   border-bottom: 1px solid $divider-color;
-  @include flex-box(space-between);
 
-  div {
-    @include flex-box(flex-end);
+  .content-div {
+    @include flex-box(space-between);
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
 
-    a {
-      text-transform: uppercase;
-      font-family: $heading-font;
-      margin-left: 20px;
+    h1 {
+      @include reset();
+      font-size: 1.6rem;
     }
-  }
 
-  h1 {
-    @include reset();
-    font-size: 1.6rem;
+    a:hover {
+      text-decoration: none;
+    }
+
+    div {
+      @include flex-box(flex-end);
+
+      a {
+        text-transform: uppercase;
+        font-family: $heading-font;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
