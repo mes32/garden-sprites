@@ -1,13 +1,14 @@
-@import "typography";
 @import "colors";
+@import "reset";
+@import "typography";
 
 body {
-  padding: 0;
-  margin: 0;
+  @include reset();
   font-family: $body-font;
   -webkit-font-smoothing: antialiased;
   font-size: 1.125em;
   color: $body-color;
+  background-color: $body-background-color;
   line-height: 1.5em;
 }
 

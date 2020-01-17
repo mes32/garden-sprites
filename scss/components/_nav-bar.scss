@@ -1,13 +1,14 @@
+@import "../base/reset";
 @import "../base/typography";
 
 .nav-bar {
-  margin: 0;
-  padding: 0;
+  @include reset();
 
   width: 100%;
   position: fixed;
   top: 0;
-  border-bottom: 1px solid #f0f0f0;
+  background-color: $body-background-color;
+  border-bottom: 1px solid $divider-color;
 
 //   padding: 0.2rem 40px;
 
@@ -36,8 +37,7 @@
 
 
   h1 {
-    margin: 0;
-    padding: 0;
+    @include reset();
     font-size: 1.6rem;
   }
 }
