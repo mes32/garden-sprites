@@ -7,17 +7,19 @@
             [spec-tools.data-spec :as ds]
             [fipp.edn :as fedn]
             [garden-sprites.routes :refer [match routes refs]]
-            [garden-sprites.components.nav-bar :refer [nav-bar]]))
+            [garden-sprites.components.nav-bar :refer [nav-bar]]
+            [garden-sprites.components.footer :refer [footer]]))
 
 ;; -------------------------
 ;; Current page
 (defn current-page []
   [:div
-   [nav-bar]
-   (if @match
-     (let [view (:view (:data @match))]
-       [view @match]))
-   [:pre (with-out-str (fedn/pprint @match))]])
+    [nav-bar]
+    (if @match
+      (let [view (:view (:data @match))]
+        [view @match]))
+    ; [:pre (with-out-str (fedn/pprint @match))]
+    [footer]])
 
 ;; -------------------------
 ;; Initialize app

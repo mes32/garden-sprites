@@ -1,0 +1,45 @@
+@import "../base/colors";
+@import "../base/layout";
+@import "../base/reset";
+
+footer {
+  @include reset();
+  padding: 1.6rem 0 2rem 0;
+  text-align: center;
+  background-color: $footer-background-color;
+
+  .content-div {
+    div {
+      @include flex-box(space-between);
+      max-width: 50%;
+      margin: 0 auto;
+      padding: 0 20px;
+      border-top: 2px solid $footer-color;
+    }
+  }
+
+  h2 {
+    @include reset();
+    margin: 1.4rem 0 1rem 0;
+    font-size: 1.4rem;
+    color: $footer-color;
+  }
+
+  h3 {
+    @include reset();
+    font-size: 0.8rem;
+    color: $footer-color;
+  }
+
+  a {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $footer-color;
+
+    &:hover {
+      text-decoration: none;
+      color: $footer-color-bright;
+    }
+  }
+}
