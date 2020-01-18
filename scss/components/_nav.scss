@@ -37,6 +37,10 @@ nav {
       a:hover {
         text-decoration: underline;
       }
+
+      a.selected {
+        color: $selected-link-color;
+      }
     }
   }
 }

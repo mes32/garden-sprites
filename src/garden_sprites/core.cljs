@@ -18,7 +18,7 @@
     (if @match
       (let [view (:view (:data @match))]
         [view @match]))
-    ; [:pre (with-out-str (fedn/pprint @match))]
+    [:pre (with-out-str (fedn/pprint @match))]
     [footer]])
 
 ;; -------------------------
