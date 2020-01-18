@@ -11,4 +11,4 @@
         [:a {:href (rfe/href (:herbs refs))} "Herbs"]
         [:a {:href (rfe/href (:succulents refs))} "Succulents"]]]
       [:h2 "Garden Sprites"]
-      [:h3 "Ⓒ2020"]])
+      [:h3 "(Subsoil Layer)"]])

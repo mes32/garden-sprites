@@ -20,7 +20,7 @@ footer {
 
   h2 {
     @include reset();
-    margin: 1.4rem 0 1rem 0;
+    margin: 1.4rem 0 2rem 0;
     font-size: 1.4rem;
     color: $footer-color;
   }
@@ -28,6 +28,7 @@ footer {
   h3 {
     @include reset();
     font-size: 0.8rem;
+    font-style: italic;
     color: $footer-color;
   }
 
