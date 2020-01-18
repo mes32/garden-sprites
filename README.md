@@ -63,7 +63,10 @@ git push heroku master
 ## Features
 
 ### Completed Features
-- [X] Client-side routing using Reitit
+- [X] Minimal Clojure server delivers ClojureScript client-side
+- [X] Reactive components and state management using Reagent
+- [X] Client-side routing and multiple pages using Reitit library
+- [X] Style sheets written in SCSS
 
 ### Future Features
 - [ ] Shopping cart state managed using an atom
