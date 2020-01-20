@@ -7,7 +7,8 @@
       ^{:key plant}
         [:div
           [:h3 (:name plant)]
-          [:img {:src (:image-path plant)}]])])
+          [:img {:src (first (:image-paths plant))}]
+          [:h4 "$" (:price plant)]])])
 
 (defn succulents-page []
   [:main
