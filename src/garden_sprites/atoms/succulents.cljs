@@ -16,11 +16,11 @@
 (defonce succulents (r/atom
   [
     {:name "Echeveria 'Fleur Blanc'"
-     :img "./images/green-echeveria.jpg"
+     :image-path "./images/green-echeveria.jpg"
      :price 20.00}
     {:name "Spotted Aloe Vera"
-     :img "./images/spotted-aloe-vera.jpg"
+     :image-path "./images/spotted-aloe-vera.jpg"
      :price 15.50}
     {:name "Cactus"
-     :img "./images/cactus.jpg"
+     :image-path "./images/cactus.jpg"
      :price 10.20}]))
