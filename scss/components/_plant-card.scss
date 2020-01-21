@@ -1,0 +1,19 @@
+@import "../base/colors";
+@import "../base/reset";
+
+.plant-card {  
+  border: 1px solid $divider-color;
+  border-radius: 10px;
+  width: 500px;
+  padding: 1rem 30px;
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+
+  h3, h4 {
+    @include reset();
+  }
+
+  h3 {
+    margin-bottom: 0.6rem;
+  }
+}

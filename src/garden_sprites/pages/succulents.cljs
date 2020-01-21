@@ -5,7 +5,7 @@
   [:div
     (for [plant succulents]
       ^{:key plant}
-        [:div
+        [:div.plant-card
           [:h3 (:name plant)]
           [:img {:src (first (:image-paths plant))}]
           [:h4 "$" (:price plant)]])])
