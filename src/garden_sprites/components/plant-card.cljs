@@ -1,10 +1,16 @@
-(ns garden-sprites.components.plant-card)
+(ns garden-sprites.components.plant-card
+  (:require [garden-sprites.atoms.plants :refer [plants filter-plants]]))
 
-(defn list-cards [plants]
+(defn plant-card
+  [plant]
+  [:div.plant-card
+    [:h3 (:name plant)]
+    [:img {:src (first (:image-paths plant))}]
+    [:h4 "$" (:price plant)]])
+
+(defn list-cards [plant-type]
   [:div
-    (for [plant plants]
-      ^{:key plant}
-        [:div.plant-card
-          [:h3 (:name plant)]
-          [:img {:src (first (:image-paths plant))}]
-          [:h4 "$" (:price plant)]])])
+    (do
+      (reset! plants (filter-plants plant-type))
+      (for [plant @plants]
+        ^{:key plant} (plant-card plant)))])

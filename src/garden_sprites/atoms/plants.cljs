@@ -13,7 +13,7 @@
 (ns garden-sprites.atoms.plants
   (:require [reagent.core :as r]))
 
-(defonce plants (r/atom
+(defonce all-plants
   [
     {:name "Echeveria 'Fleur Blanc'"
       :plant-type "succulent"
@@ -32,4 +32,18 @@
       :image-paths [
         "./images/cactus.jpg"]
       :price 10.20
-      :description "This classic succulent requires minimal water. Watch out for the spines."}]))
+      :description "This classic succulent requires minimal water. Watch out for the spines."}
+    {:name "Dummy"
+      :plant-type "herb"
+      :image-paths [
+       "./images/spotted-aloe-vera.jpg"]
+      :price 0
+      :description "This is not a succulent."}])
+
+(defonce plants (r/atom all-plants))
+
+(defn filter-plants
+  [plant-type]
+  (if (nil? plant-type)
+    all-plants
+    (filter #(= (:plant-type %) plant-type) all-plants)))
