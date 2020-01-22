@@ -10,10 +10,10 @@
 ; Photo by Abhinav Goswami from Pexels
 ; Cactus
 
-(ns garden-sprites.atoms.succulents
+(ns garden-sprites.atoms.plants
   (:require [reagent.core :as r]))
 
-(defonce succulents (r/atom
+(defonce plants (r/atom
   [
     {:name "Echeveria 'Fleur Blanc'"
       :plant-type "succulent"

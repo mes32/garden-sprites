@@ -1,17 +1,9 @@
 (ns garden-sprites.pages.succulents
-  (:require [garden-sprites.atoms.succulents :refer [succulents]]))
-
-(defn list-cards [succulents]
-  [:div
-    (for [plant succulents]
-      ^{:key plant}
-        [:div.plant-card
-          [:h3 (:name plant)]
-          [:img {:src (first (:image-paths plant))}]
-          [:h4 "$" (:price plant)]])])
+  (:require [garden-sprites.atoms.plants :refer [plants]]
+            [garden-sprites.components.plant-card :refer [list-cards]]))
 
 (defn succulents-page []
   [:main
     [:div {:class "content-div"}
       [:h2 "Shop Succulents"]
-      [list-cards @succulents]]])
+      [list-cards @plants]]])
