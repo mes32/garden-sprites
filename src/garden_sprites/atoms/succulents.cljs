@@ -16,14 +16,20 @@
 (defonce succulents (r/atom
   [
     {:name "Echeveria 'Fleur Blanc'"
+      :plant-type "succulent"
       :image-paths [
         "./images/green-echeveria.jpg"]
-      :price 20.00}
+      :price 20.00
+      :description "This plant grows as a rosette of succulent lobes. These plants are native semi-arid biomes. They are easy to care for and maintain."}
     {:name "Spotted Aloe Vera"
+      :plant-type "succulent"
       :image-paths [
        "./images/spotted-aloe-vera.jpg"]
-      :price 15.50}
+      :price 15.50
+      :description "This is the spotted variety of the Aloe Vera Plant."}
     {:name "Cactus"
+      :plant-type "succulent"
       :image-paths [
         "./images/cactus.jpg"]
-      :price 10.20}]))
+      :price 10.20
+      :description "This classic succulent requires minimal water. Watch out for the spines."}]))
