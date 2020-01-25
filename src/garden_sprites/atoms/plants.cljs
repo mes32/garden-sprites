@@ -42,8 +42,8 @@
 
 (defonce plants (r/atom all-plants))
 
-(defn filter-plants
+(defn get-plants-type!
   [plant-type]
   (if (nil? plant-type)
-    all-plants
-    (filter #(= (:plant-type %) plant-type) all-plants)))
+    (reset! plants all-plants)
+    (reset! plants (filter #(= (:plant-type %) plant-type) all-plants))))

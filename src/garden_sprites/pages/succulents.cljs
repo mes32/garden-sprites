@@ -5,4 +5,4 @@
   [:main
     [:div {:class "content-div"}
       [:h2 "Shop Succulents"]
-      [list-cards "succlents"]]])
+      [list-cards "succulent"]]])

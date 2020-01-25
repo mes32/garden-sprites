@@ -1,5 +1,5 @@
 (ns garden-sprites.components.plant-card
-  (:require [garden-sprites.atoms.plants :refer [plants filter-plants]]))
+  (:require [garden-sprites.atoms.plants :refer [plants get-plants-type!]]))
 
 (defn plant-card
   [plant]
@@ -9,8 +9,8 @@
     [:h4 "$" (:price plant)]])
 
 (defn list-cards [plant-type]
-  [:div
-    (do
-      (reset! plants (filter-plants plant-type))
+  (do
+    (get-plants-type! plant-type))
+    [:div
       (for [plant @plants]
-        ^{:key plant} (plant-card plant)))])
+        ^{:key plant} (plant-card plant))])
