@@ -1,12 +1,8 @@
 (ns garden-sprites.pages.herbs
-  (:require [garden-sprites.atoms.counter :refer [counter counter-dec]]))
+  (:require [garden-sprites.components.plant-card :refer [list-cards]]))
 
 (defn herbs-page []
   [:main
     [:div {:class "content-div"}
       [:h2 "Shop Herbs"]
-      [:h3 "Count: " @counter]
-      [:input {:type "button" :value "Increase Count"
-              :on-click #(swap! counter inc)}]
-      [:input {:type "button" :value "Decrease Count"
-              :on-click #(swap! counter counter-dec)}]]])
+      [list-cards "herb"]]])
