@@ -7,7 +7,6 @@
     [:div {:class "content-div"}
     [:h2 "Welcome to Garden Sprites"]
     [:h3 "Online plant retailer, ESTD. 2020"]
-    [:img {:src "./images/potted-plants.jpg"}] ; Photo by Min An from Pexels
     [list-cards]
     [:h3 "Count: " @counter]
     [:input {:type "button" :value "Increase Count"
