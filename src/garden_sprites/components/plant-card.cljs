@@ -6,7 +6,8 @@
   [:div.plant-card
     [:h3 (:name plant)]
     [:img {:src (first (:image-paths plant))}]
-    [:h4 "$" (:price plant)]])
+    [:h4 "$" (:price plant)]
+    [:button "Add to cart"]])
 
 (defn list-cards [plant-type]
   (do

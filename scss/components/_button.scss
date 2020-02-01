@@ -1,0 +1,19 @@
+@import "../base/colors";
+@import "../base/typography";
+
+button {
+  color: white;
+  background-color: $link-color;
+  padding: 0.2em 20px;
+  margin-top: 0.4em;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
+  font-weight: bold;
+  border: 1px solid $link-color;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $selected-link-color;
+  }
+}
